@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomePage"
+    android:background="@drawable/page_accueil_background">
+
+
+    <TextView
+        android:id="@+id/textviewlascene"
+        android:layout_width="136dp"
+        android:layout_height="45dp"
+        android:alpha="0"
+        android:gravity="center_horizontal"
+        android:text="la scène"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textviewlatechnique"
+        app:layout_constraintVertical_bias="0.162" />
+
+    <TextView
+        android:id="@+id/textviewcoulisses1"
+        android:layout_width="91dp"
+        android:layout_height="60dp"
+        android:alpha="0"
+        android:gravity="center_horizontal"
+        android:text="les coulisses"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/textviewlascene"
+        app:layout_constraintHorizontal_bias="0.253"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.421" />
+
+    <TextView
+        android:id="@+id/textviewQuiz"
+        android:layout_width="82dp"
+        android:layout_height="53dp"
+        android:alpha="0"
+        android:gravity="center_horizontal"
+        android:text="Quiz"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.709"
+        app:layout_constraintStart_toEndOf="@+id/textviewlascene"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.421" />
+
+    <TextView
+        android:id="@+id/textviewactualite"
+        android:layout_width="96dp"
+        android:layout_height="50dp"
+        android:alpha="0"
+        android:gravity="center_horizontal"
+        android:text="actualités"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/textvieworchetre"
+        app:layout_constraintHorizontal_bias="0.26"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.606" />
+
+    <TextView
+        android:id="@+id/textviewbilletterie"
+        android:layout_width="102dp"
+        android:layout_height="50dp"
+        android:alpha="0"
+        android:gravity="center_horizontal"
+        android:text="billetterie"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.875"
+        app:layout_constraintStart_toEndOf="@+id/textvieworchetre"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.606" />
+
+    <TextView
+        android:id="@+id/textviewassociation"
+        android:layout_width="130dp"
+        android:layout_height="35dp"
+        android:alpha="0"
+        android:gravity="center_horizontal"
+        android:text="l'association"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/textviewprecedentesproduction"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.181"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.914" />
+
+    <TextView
+        android:id="@+id/textviewpartenaires"
+        android:layout_width="158dp"
+        android:layout_height="30dp"
+        android:alpha="0"
+        android:gravity="center_horizontal"
+        android:text="nos partenaires"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.367"
+        app:layout_constraintStart_toEndOf="@+id/textviewassociation"
+        app:layout_constraintTop_toTopOf="@+id/textviewassociation"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textvieworchetre"
+        android:layout_width="127dp"
+        android:layout_height="55dp"
+        android:alpha="0"
+        android:gravity="center_horizontal"
+        android:text="l'orchestre"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textviewlascene"
+        app:layout_constraintVertical_bias="0.192" />
+
+    <TextView
+        android:id="@+id/textviewprecedentesproduction"
+        android:layout_width="144dp"
+        android:layout_height="39dp"
+        android:alpha="0"
+        android:gravity="center_horizontal"
+        android:text="les précédentes productions"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textvieworchetre"
+        app:layout_constraintVertical_bias="0.747" />
+
+    <TextView
+        android:id="@+id/textviewlatechnique"
+        android:layout_width="101dp"
+        android:layout_height="19dp"
+        android:alpha="0"
+        android:gravity="center_horizontal"
+        android:text="la technique"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textSize="14dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/backtopageaccueil"
+        app:layout_constraintVertical_bias="0.128" />
+
+    <ImageView
+        android:id="@+id/backtopageaccueil"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/fovdl_appli_boutonretour" />
+
+    <!-- android:alpha="0"-->
+</androidx.constraintlayout.widget.ConstraintLayout>
