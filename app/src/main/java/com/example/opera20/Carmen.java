@@ -24,10 +24,6 @@ public class Carmen extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_actu_opera);
-        //
-        WebViewCacheInterceptorInst.getInstance().
-                init(new WebViewCacheInterceptor.Builder(this));
-        //
         webview=findViewById(R.id.webview);
         webview.setWebViewClient(new MyBrowser());
         WebSettings webSettings=webview.getSettings();

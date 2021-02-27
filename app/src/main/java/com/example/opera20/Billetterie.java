@@ -33,41 +33,9 @@ public class Billetterie extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_billetterie);
-        //
-        WebViewCacheInterceptorInst.getInstance().
-                init(new WebViewCacheInterceptor.Builder(this));
-         WebViewCacheInterceptor.Builder builder =  new WebViewCacheInterceptor.Builder(this);
-
-        builder//设置缓存路径，默认getCacheDir，名称CacheWebViewCache
-                .setCacheSize(1024*1024*300)//设置缓存大小，默认100M
-                .setConnectTimeoutSecond(20)//设置http请求链接超时，默认20秒
-                .setReadTimeoutSecond(20)//设置http请求链接读取超时，默认20秒
-                .setCacheType(CacheType.NORMAL);//设置缓存为正常模式，默认模式为强制缓存静态资源
-
-        WebViewCacheInterceptorInst.getInstance().init(builder);
-
-        //
         webview=findViewById(R.id.webview);
-        //webview.setWebViewClient(new MyBrowser());
-        //
-                webview.setWebViewClient(new WebViewClient(){
-
-                    @TargetApi(Build.VERSION_CODES.LOLLIPOP)
-                    @Nullable
-                    @Override
-                    public WebResourceResponse shouldInterceptRequest(WebView view, WebResourceRequest request) {
-                        return  WebViewCacheInterceptorInst.getInstance().interceptRequest(request);
-                    }
-
-                    @Nullable
-                    @Override
-                    public WebResourceResponse shouldInterceptRequest(WebView view, String url) {
-                        return  WebViewCacheInterceptorInst.getInstance().interceptRequest(url);
-                    }
-                });
-        //
+        webview.setWebViewClient(new Billetterie.MyBrowser());
         WebSettings webSettings=webview.getSettings();
-
         webview.requestFocus();
         webSettings.setLightTouchEnabled(true);
         webSettings.setJavaScriptEnabled(true);
@@ -128,7 +96,7 @@ public class Billetterie extends AppCompatActivity {
                 Intent HomePage2 = new Intent(Billetterie.this, HomePage.class);
                 startActivity(HomePage2);
                 overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
-                //Billetterie.this.finish();
+                Billetterie.this.finish();
             }
         }
         return false;

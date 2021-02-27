@@ -170,6 +170,20 @@ public class FaceFilterActivity extends AppCompatActivity {
                             .thenAccept(texture -> faceMeshTexture = texture);
                     m_changement_filtre=0;//On remet la variable à 0 pour relancer la boucle au prochain appui du bouton
                 }
+                // five face mask
+                else  if( m_changement_filtre == 5 )
+                {
+                    faceNodeMap.clear();
+                    try{
+                        faceNode.setParent(null);
+                    }
+                    catch (Exception e){ }
+                    Texture.builder()
+                            .setSource(FaceFilterActivity.this, R.drawable.mask)
+                            .build()
+                            .thenAccept(texture -> faceMeshTexture = texture);
+                    m_changement_filtre=0;//On remet la variable à 0 pour relancer la boucle au prochain appui du bouton
+                }
             }
         });
 

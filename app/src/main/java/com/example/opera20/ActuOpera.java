@@ -32,7 +32,7 @@ public class ActuOpera extends AppCompatActivity {
                 init(new WebViewCacheInterceptor.Builder(this));
         //
         webview=findViewById(R.id.webview);
-        webview.setWebViewClient(new MyBrowser());
+        webview.setWebViewClient(new ActuOpera.MyBrowser());
         WebSettings webSettings=webview.getSettings();
         webview.requestFocus();
         webSettings.setLightTouchEnabled(true);
@@ -94,7 +94,7 @@ public class ActuOpera extends AppCompatActivity {
                 Intent HomePage = new Intent(ActuOpera.this, HomePage.class);
                 startActivity(HomePage);
                 overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
-               // ActuOpera.this.finish();
+                ActuOpera.this.finish();
             }
         }
         return false;
